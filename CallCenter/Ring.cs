@@ -4,12 +4,12 @@ namespace CallCenter
 {
     class Ring
     {
-        public Ring(UInt64 id)
+        public Ring(ulong id)
         {
             Id = id;
         }
 
-        public UInt64 Id { get; set; }
+        public ulong Id { get; set; }
 
         public override string ToString()
         {
