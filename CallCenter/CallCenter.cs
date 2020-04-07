@@ -18,7 +18,7 @@ namespace CallCenter
         public void AddRingInOrder(Ring ring)
         {
             var order = Interlocked.Increment(ref _order.OrderLength);
-            var wait = new RingInOrder(ring, order,_order);
+            var wait = new RingInOrder(ring, order, _order);
             wait.StartWaiting();
             _ringsInOrder.Enqueue(wait);
         }
