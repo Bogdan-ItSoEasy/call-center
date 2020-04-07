@@ -51,11 +51,11 @@ namespace CallCenter
         {
             switch (worker)
             {
-                case Manager manager:
-                    Managers.Enqueue(manager);
-                    break;
                 case Operator @operator:
                     Operators.Enqueue(@operator);
+                    break;
+                case Manager manager:
+                    Managers.Enqueue(manager);
                     break;
                 case Director director:
                     Directors.Enqueue(director);
