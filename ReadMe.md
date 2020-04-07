@@ -21,4 +21,4 @@ Configuration is named "appsettings.json". It's written in Json Format and has n
 </pre>
 
 
-Parameter <code>managersCount</code> set up how much operators will be work in Call Center and <code>operatorsCount</code> parameter set same thing for operators.  Parameters have to be a positive integer value.
+Parameter <code>managersCount</code> set up how much operators will be work in Call Center and <code>operatorsCount</code> parameter set up same thing for operators.  Parameters have to be a positive integer value.
