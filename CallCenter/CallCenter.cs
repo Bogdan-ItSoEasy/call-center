@@ -61,7 +61,7 @@ namespace CallCenter
                     Directors.Enqueue(director);
                     break;
                 default:
-                    throw new Exception();
+                    throw new ArgumentException("Invalid type of worker");
             }
         }
 
@@ -72,7 +72,7 @@ namespace CallCenter
                 if (_ringsInOrder.Count != 0 && TryGetFreeWorker(out IWorker worker))
                 {
                     if(!_ringsInOrder.TryDequeue(out RingInOrder ring)){
-                        throw new Exception();
+                        throw new InvalidOperationException("Couldn't dequeue Ring from queue while queue isn't empty");
                     }
 
                     Interlocked.Increment(ref _order.OrderHandled);

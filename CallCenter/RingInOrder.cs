@@ -9,8 +9,8 @@ namespace CallCenter
         public RingInOrder(Ring ring, int orderNumber, Order order)
         {
             Ring = ring;
-            _order = order;
             OrderNumber = orderNumber;
+            _order = order;
         }
         
         public int OrderNumber { get; }
