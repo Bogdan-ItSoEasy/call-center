@@ -9,7 +9,7 @@ namespace CallCenter
         public RingInOrder(Ring ring, int orderNumber, Order order)
         {
             Ring = ring;
-            Order = order;
+            _order = order;
             OrderNumber = orderNumber;
         }
         
@@ -31,7 +31,7 @@ namespace CallCenter
                     await Task.Delay(1000, ct);
                     if (ct.IsCancellationRequested)
                         break;
-                    Console.WriteLine($"{Ring} в ожидании ({++sec} секунда, {OrderNumber - Order.OrderHandled}й в очереди)");
+                    Console.WriteLine($"{Ring} в ожидании ({++sec} секунда, {OrderNumber - _order.OrderHandled}й в очереди)");
                 }
             }, ct);
         }
