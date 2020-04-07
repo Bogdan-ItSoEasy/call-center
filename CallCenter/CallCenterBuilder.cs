@@ -33,6 +33,9 @@ namespace CallCenter
             }
         }
 
+        private readonly uint _managersCount;
+        private readonly uint _operatorsCount;
+
         public CallCenter Build()
         {
             return new CallCenter
@@ -43,8 +46,5 @@ namespace CallCenter
             };
             
         }
-
-        private readonly uint _managersCount;
-        private readonly uint _operatorsCount;
     }
 }

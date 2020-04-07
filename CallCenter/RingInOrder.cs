@@ -14,9 +14,9 @@ namespace CallCenter
         }
         
         public int OrderNumber { get; }
-        Order Order { get; }
         public Ring Ring { get; }
 
+        private Order _order;
         private CancellationTokenSource _ts;
 
         public void StartWaiting()

@@ -11,6 +11,8 @@ namespace CallCenter
             _random = new Random(255);
         }
 
+        private static Random _random;
+
         public static async Task HandleClientAsync()
         {
             var random = new Random().Next() % 1000;
@@ -22,7 +24,5 @@ namespace CallCenter
             var random = new Random().Next() % 500;
             Thread.Sleep(random);
         }
-
-        private static Random _random;
     }
 }
