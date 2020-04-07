@@ -23,7 +23,7 @@ namespace CallCenter
             while (true)
             {
                 Delay.AwaitClient();
-                callCenter.AddRingInOrder(ring: new Ring(++clientId));
+                callCenter.AddRingInOrder(new Ring(++clientId));
             } 
         }
     }

@@ -9,7 +9,6 @@ namespace CallCenter.CallCenterWorkers
         {
             Console.WriteLine($"{name} - {this}");
             await Delay.HandleClientAsync();
-
         }
 
         public int Id { get; set; }
